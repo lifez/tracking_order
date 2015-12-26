@@ -1,6 +1,7 @@
 
-<p><%= link_to "Add Order", new_orders_path %><p>
-<p><%= link_to "Edit", estimate_users_admin_path(current_user.id) %><p>
+<p><%= link_to "Add Order", new_orders_path %></p>
+<p><%= link_to "Edit", estimate_users_admin_path(current_user.id) %></p>
+<p><%= link_to "Sign out", destroy_user_session_path, method: :delete %></p>
 <tbody>
     <% @orders.each do |order| %>
         <tr>
