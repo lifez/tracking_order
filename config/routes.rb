@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'trackings#show'
   resource :orders
   resource :tracking
-  resources :users do
+  resources :users_admin, :controller => 'users' do
     member do
       post 'estimate', :edit_estimate
       get 'estimate'

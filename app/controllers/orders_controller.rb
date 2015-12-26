@@ -7,7 +7,7 @@ class OrdersController < ApplicationController
     order_array.each { |i|
       Orders.create! :order_id => i, user_id: current_user.id
     }
-    redirect_to users_path
+    redirect_to users_admin_index_path
   end
 
   private

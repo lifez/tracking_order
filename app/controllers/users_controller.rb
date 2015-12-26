@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     estimate_data = user_params
     @user = User.find(current_user)
     if @user.update_attributes(user_params)
-      redirect_to users_path
+      redirect_to users_admin_index_path
    else
      redirect_to :back
    end

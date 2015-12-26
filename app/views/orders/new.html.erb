@@ -1,14 +1,8 @@
-<%= form_for :tracking, url: edit_estimate_user_path do |f| %>
+<%= form_for :orders, url: orders_path do |f| %>
 <p>
-  <%= f.label :start, 'Start' %><br>
-  <%= f.text_field :start %>
+  <%= f.label :order_id, 'Order Id' %><br>
+  <%= f.text_area :order_id, :size => '30x20' %>
 </p>
-
-<p>
-  <%= f.label :end, 'End' %><br>
-  <%= f.text_field :end %>
-</p>
-
 <p>
    <%= f.submit %>
 </p>

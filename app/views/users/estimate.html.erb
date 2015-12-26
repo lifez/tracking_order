@@ -1,4 +1,4 @@
-<%= form_for :estimate, url: edit_estimate_user_path do |f| %>
+<%= form_for :estimate, url: edit_estimate_users_admin_path(current_user) do |f| %>
 <p>
   <%= f.label :start, 'Start' %><br>
   <%= f.text_field :start %>
