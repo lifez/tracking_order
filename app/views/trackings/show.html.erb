@@ -4,8 +4,10 @@
   <%= text_field_tag(:q, "", :id => 'search') %>
   <%= submit_tag("Go", :id => 'submit') %>
 <% end %>
+<% if @order %>
 <h2><%= "Your Order id is #{@order.order_id}" %></h2>
 <h2><%= @order.estimate_date %></h2>
+<% end %>
 <style>
 body {
   background: #eee;
