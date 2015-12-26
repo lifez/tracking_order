@@ -1,0 +1,6 @@
+<%= form_tag(tracking_path, method: "get") do %>
+  <%= label_tag(:q, "Search for Order Id:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+<% end %>
+<%= @order.id %>

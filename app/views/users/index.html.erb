@@ -1,0 +1,10 @@
+
+<p><%= link_to "Add Order", new_orders_path %><p>
+<p><%= link_to "Edit", estimate_user_path(current_user.id) %><p>
+<tbody>
+    <% @orders.each do |order| %>
+        <tr>
+          <td><%= order.order_id %></td><br>
+        </tr>
+    <% end %>
+</tbody>
