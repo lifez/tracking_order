@@ -10,9 +10,9 @@ class Orders < ActiveRecord::Base
  end
 
   def estimate_date
-    user = User.find(self.user_id)
-    start_date =  (self.created_at + user.start.days).strftime("%d %B %Y")
-    end_date = (self.created_at + user.end.days).strftime("%d %B %Y")
+    @user = User.find(self.user_id)
+    start_date =  (self.created_at + @user.start.days).strftime("%d %B %Y")
+    end_date = (self.created_at + @user.end.days).strftime("%d %B %Y")
     "Your Estimate delivery is between #{start_date} an #{end_date} "
   end
 
