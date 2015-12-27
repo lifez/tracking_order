@@ -12,5 +12,6 @@ class TrackingsController < ApplicationController
     unless order_id.include? "#"
       order_id = "#" + order_id
     end
+      order_id
   end
 end

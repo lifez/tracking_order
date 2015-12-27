@@ -13,8 +13,12 @@ RSpec.describe TrackingsController, :type => :controller do
       expect(response).to render_template("show")
     end
 
-    it "can show estimate date" do
-      get :show
+    it "can show order status" do
+      build(:orders)
+      get :show , {:q => 1}
+      expect(response).to be_success
+      expect(response).to have_http_status(200)
+
     end
 
   end
