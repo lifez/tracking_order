@@ -1,2 +1,8 @@
 rvm:
  - "2.2.1"
+
+services:
+  - mysql
+
+  before_script:
+  - mysql -e 'create database tracking_test;'
